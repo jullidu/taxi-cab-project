@@ -1,0 +1,677 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+    font-family: "Lato - Black", sans-serif;
+}
+
+div.main-top {
+    min-height: 750px;
+    background-image: url(../images/top_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px 100px 0;
+    position: relative;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.logo-cab {
+    font-size: 40px;
+    font-weight: 400;
+    color: #fff;
+    float: left;
+}
+
+.logo-hub {
+    font-size: 40px;
+    font-weight: 400;
+    color: #daa505;
+}
+
+.logo-call {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2.2px;
+}
+
+.nav-bar li {
+    list-style-type: none;
+    display: inline-block;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.nav-bar li:hover:not(.active) {
+    color: rgb(185, 183, 183);
+}
+
+.nav-bar li:not(.last) {
+    margin-right: 35px;
+
+}
+
+li.active {
+    background-color: #ffc61a;
+    width: 96px;
+    height: 34px;
+    border-radius: 20px;
+    color: #010101;
+    padding: 7px 0 0 23px;
+    font-weight: 800;
+}
+
+ul.nav-bar {
+    justify-self: end;
+}
+
+.name h1 {
+    color: #ffc61a;
+    font-size: 36px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+p.tel {
+    color: #fff;
+    font-size: 72px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+p.sait {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 14px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+div.taxi-img {
+    background-image: url(../images/Car_Image.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 484px;
+    max-width: 826px;
+    position: absolute;
+    top: 390px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.name {
+    margin-top: 50px;
+}
+
+section.best-in-city {
+    min-height: 700px;
+    background-color: #ffc61a;
+    padding: 150px 190px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.best-in-city h3 {
+    color: #000000;
+    font-size: 35px;
+    text-transform: uppercase;
+}
+
+.best-in-city h2 {
+    color: #101010;
+    font-size: 50px;
+    text-transform: uppercase;
+    margin-top: 25px;
+}
+
+.cab-service {
+    margin-bottom: 50px;
+}
+
+.cab-service p {
+    color: #101010;
+    font-family: Lato, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 40px;
+    text-align: justify;
+}
+
+a.read-more {
+    display: inline-block;
+    text-decoration: none;
+    width: 166px;
+    height: 50px;
+    background-color: #000;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-top: 60px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+a.read-more:hover {
+    opacity: 0.7;
+}
+
+div.input {
+    width: 470px;
+    height: 490px;
+    justify-self: end;
+}
+
+p.name-form {
+    display: block;
+    height: 77px;
+    background-color: #171717;
+    color: #ffffff;
+    font-size: 34px;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 20px 37px;
+}
+
+.word-cab {
+    color: #ffc61a;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px 30px;
+    background-color: #fff;
+    grid-column-gap: 23px;
+}
+
+input#vehicle,
+.button-form {
+    grid-column: 1/3;
+}
+
+div.input input {
+    height: 66px;
+    border: none;
+    border-bottom: 3px solid #e4e4e4;
+}
+
+input[placeholder] {
+    color: #000000;
+    font-size: 17px;
+    font-family: "Lato bold", sans-serif;
+}
+
+
+.button-form {
+    height: 50px;
+    background-color: #131313;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+
+.button-form:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+section.tariffs {
+    min-height: 760px;
+    background-color: #fff;
+    padding: 0 190px 0;
+}
+
+.tariffs h2 {
+    color: #ffc61a;
+    font-size: 35px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.tariffs h2 span {
+    color: #000000;
+    font-size: 44px;
+}
+
+div.tariff-class {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 130px;
+    justify-items: center;
+}
+
+article.econom,
+article.business {
+    width: 373px;
+    min-height: 424px;
+    background-color: #f5f4f2;
+}
+
+article.standard {
+    width: 373px;
+    min-height: 424px;
+    background-color: #ffc61a;
+    background-image: url(../images/star-tariffs.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+article.econom h3,
+article.business h3,
+article.standard h3 {
+    color: #000000;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-top: 124px;
+    text-align: center;
+}
+
+.tariffs-description {
+    color: #101010;
+    font-family: Lato, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 30px;
+    text-align: center;
+}
+
+.tariffs-cost {
+    color: #ffc61a;
+    font-size: 44px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+}
+
+.tariffs-cost-standard {
+    color: #131313;
+    font-size: 44px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+}
+
+.tariffs-button {
+    width: 166px;
+    height: 50px;
+    background-color: #ffc61a;
+    display: inline-block;
+    text-decoration: none;
+    color: #000000;
+    font-size: 25px;
+    font-weight: 800;
+    text-transform: uppercase;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 10px;
+    margin: 30px 100px;
+}
+
+.tariffs-button-standard {
+    width: 166px;
+    height: 50px;
+    background-color: #1b1b1b;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 800;
+    text-transform: uppercase;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 10px;
+    margin: 30px 100px;
+}
+
+.tariffs-button:hover,
+.tariffs-button-standard:hover {
+    opacity: 0.7;
+}
+
+article.econom,
+article.business,
+article.standard {
+    position: relative;
+}
+
+.tariff-img {
+    position: absolute;
+    top: -84px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section.do-best {
+    min-height: 753px;
+    background: url(../images/do-best-bg.png) no-repeat;
+    background-size: 100% 100%;
+    display: grid;
+    grid-template: repeat(4, 1fr) / 1fr 1fr;
+    padding: 80px 190px 20px;
+    grid-gap: 80px 150px;
+}
+
+.do-best-name {
+    color: #ffc61a;
+    font-size: 35px;
+    text-transform: uppercase;
+    grid-column: 1/3;
+    text-align: center;
+}
+
+.do-best-name span {
+    color: #ffffff;
+    font-size: 44px;
+}
+
+.do-best article h3 {
+    color: #ffc61a;
+    font-size: 25px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 0 0 24px 115px;
+}
+
+.do-best article p {
+    color: #ffffff;
+    font-family: Lato, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: 115px;
+}
+
+article.home-pickup {
+    background-image: url(../images/home-pickup.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+
+article.fast-booking {
+    background-image: url(../images/fast-booking.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+
+article.bonuses-ride {
+    background-image: url(../images/bonuses-ride.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+
+article.gps-searching {
+    background-image: url(../images/gps-searching.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+
+.do-best-button {
+    grid-column: 1/3;
+    justify-self: center;
+}
+
+section.download {
+    min-height: 650px;
+    background-color: #fff;
+    padding-top: 65px;
+    display: grid;
+    grid-template: 1fr 3fr/1fr 1fr;
+}
+
+.download-name {
+    color: #ffc61a;
+    font-size: 35px;
+    text-transform: uppercase;
+    grid-column: 1/3;
+    text-align: center;
+}
+
+.download-name span {
+    color: #000000;
+    font-size: 44px;
+}
+
+.download-app h3 {
+    color: #000000;
+    font-size: 25px;
+    margin-bottom: 28px;
+}
+
+.download-app p {
+    color: #101010;
+    font-family: Lato, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0 70px 60px 0;
+}
+
+div.download-app {
+    justify-self: right;
+}
+
+img.app-store {
+    margin-left: 15px;
+}
+
+div.download-img {
+    position: relative;
+}
+
+img.download-hand {
+    position: absolute;
+    top: -27px;
+    left: 170px;
+}
+
+section.reviews {
+    min-height: 610px;
+    background-image: url(../images/reviews-bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 110px 220px 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 30px;
+}
+
+.reviews-name {
+    color: #ffc61a;
+    font-size: 35px;
+    text-transform: uppercase;
+    grid-column: 1/3;
+    text-align: center;
+}
+
+.reviews-name span {
+    color: #ffffff;
+    font-size: 44px;
+}
+
+.separate-review {
+    background-image: url(../images/review-img.svg);
+    background-repeat: no-repeat;
+    padding: 40px 50px 0;
+}
+
+p.review-description {
+    color: #ffffff;
+    font-family: Lato, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+p.review-name {
+    color: #ffc61a;
+    font-size: 25px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    margin-left: 85px;
+}
+
+p.review-profession {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-left: 85px;
+}
+
+.separate-review img {
+    float: left;
+}
+
+div.call {
+    min-height: 286px;
+    background-color: #ffc61a;
+    padding-top: 70px;
+    text-align: center;
+}
+
+p.call-name {
+    color: #000000;
+    font-size: 35px;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-bottom: 32px;
+}
+
+p.call-tel {
+    color: #000000;
+    font-size: 77px;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+footer {
+    min-height: 500px;
+    background-image: url(../images/footer-bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: grid;
+}
+
+.footer-section-name {
+    color: #ffffff;
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-bottom: 38px;
+}
+
+hr {
+    height: 8px;
+    background-color: #ffc61a;
+    border: 0;
+    margin-bottom: 45px;
+}
+
+p.section-description {
+    color: #ffffff;
+    font-family: Lato, sans-serif;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+a.social-media>i {
+    color: #ffc61a;
+    margin-right: 15px;
+}
+
+a.social-media:hover {
+    opacity: 0.7;
+}
+
+div.android-ios-box {
+    display: grid;
+    grid-template: 1fr 1fr/1fr 1fr;
+    align-items: center;
+    grid-row-gap: 15px;
+}
+
+a.android-ios>i {
+    color: #fff;
+}
+
+a.android-ios:hover {
+    opacity: 0.7;
+}
+
+p.android-ios-name {
+color: #ffc61a;
+font-family: Lato, sans-serif;
+font-size: 20px;
+font-weight: 400;
+}
+
+address {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-row-gap: 20px;
+    align-items: baseline;
+}
+
+address i {
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+address p {
+color: #fff;
+font-family: Lato, sans-serif;
+font-size: 18px;
+}
+
+.copyright p {
+    color: #ffffff;
+    font-family: Lato, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0.7px;
+    margin-top: 20px;
+}
+
+div.footer-sections {
+    display: grid;
+    grid-template-columns: repeat(3, 340px);
+    justify-content: space-between;
+    padding: 80px 200px 0;
+}
+
+div.copyright {
+    text-align: center;
+    height: 52px;
+    align-self: end;
+    background-color: #000000;
+    opacity: 0.68;
+}
+
+.google-play:hover,
+.app-store:hover {
+    opacity: 0.7;
+}
