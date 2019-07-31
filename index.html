@@ -49,27 +49,24 @@
                     </p>
                     <a class="read-more" href="#">Read More</a>
                 </div>
-                <div class="input">
+                <form action="#">
                     <p class="name-form">Book a <span class="word-cab">Cab</span></p>
-                    <form action="#">
-                        <input type="text" name="name" placeholder="Name" pattern="^([А-Яа-я]+)$">
-                        <input type="tel" name="tel" placeholder="Phone">
-                        <input required="" type="text" class="form-control" placeholder="When"
-                            onfocus="(this.type='date')" />
-                        <input type="time">
-                        <input type="text" name="start" placeholder="Start">
-                        <input type="text" name="end" placeholder="End">
-                        <input id="vehicle" list="chooseVehicle" name="vehicle" placeholder="Choose Vehicle">
-                        <datalist id="chooseVehicle">
-                            <option label="volvo" value="volvo"></option>
-                            <option label="toyota" value="toyota"></option>
-                            <option label="BMW" value="BMW"></option>
-                            <option label="mercedes" value="mercedes"></option>
-                        </datalist>
-                        <button class="button-form" type="submit">Submit</button>
-                    </form>
-                </div>
-
+                    <input type="text" name="name" placeholder="Name" pattern="^([А-Яа-я]+)$">
+                    <input type="tel" name="tel" placeholder="Phone">
+                    <input required="" type="text" class="form-control" placeholder="When"
+                        onfocus="(this.type='date')" />
+                    <input type="time">
+                    <input type="text" name="start" placeholder="Start">
+                    <input type="text" name="end" placeholder="End">
+                    <input id="vehicle" list="chooseVehicle" name="vehicle" placeholder="Choose Vehicle">
+                    <datalist id="chooseVehicle">
+                        <option label="volvo" value="volvo"></option>
+                        <option label="toyota" value="toyota"></option>
+                        <option label="BMW" value="BMW"></option>
+                        <option label="mercedes" value="mercedes"></option>
+                    </datalist>
+                    <button class="button-form" type="submit">Submit</button>
+                </form>
             </section>
             <section class="tariffs">
                 <h2>Our <br> <span>Tariffs</span></h2>
