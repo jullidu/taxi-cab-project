@@ -85,6 +85,10 @@ ul.nav-bar {
     justify-self: end;
 }
 
+div.menu {
+    display: none;
+}
+
 .name h1 {
     color: #ffc61a;
     font-size: 36px;
@@ -132,9 +136,11 @@ div.name {
 section.best-in-city {
     min-height: 700px;
     background-color: #ffc61a;
-    padding: 150px 190px 80px;
+    padding: 150px 0 80px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 40% 30%;
+    justify-content: center;
+    grid-column-gap: 100px;
 }
 
 .best-in-city h3 {
@@ -185,7 +191,7 @@ a.read-more:hover {
 
 
 p.name-form {
-    height: 77px;
+    min-height: 77px;
     background-color: #171717;
     color: #ffffff;
     font-size: 34px;
@@ -200,8 +206,8 @@ p.name-form {
 }
 
 form {
-    width: 460px;
-    height: 472px;
+    max-width: 460px;
+    min-height: 472px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 20px 30px;
@@ -250,7 +256,6 @@ input[placeholder] {
 section.tariffs {
     min-height: 760px;
     background-color: #fff;
-    padding: 0 190px 0;
 }
 
 .tariffs h2 {
@@ -273,15 +278,24 @@ div.tariff-class {
     justify-items: center;
 }
 
+article.econom {
+    justify-self: right;
+}
+
+article.business {
+    justify-self: left;
+}
+
 article.econom,
 article.business {
-    width: 373px;
+    max-width: 373px;
     min-height: 424px;
     background-color: #f5f4f2;
 }
 
+
 article.standard {
-    width: 373px;
+    max-width: 373px;
     min-height: 424px;
     background-color: #ffc61a;
     background-image: url(../images/star-tariffs.png);
@@ -449,7 +463,7 @@ section.download {
     background-color: #fff;
     padding-top: 65px;
     display: grid;
-    grid-template: 1fr 3fr/1fr 1fr;
+    grid-template: 1fr 4fr/1fr 1fr;
 }
 
 .download-name {
@@ -481,6 +495,7 @@ section.download {
 
 div.download-app {
     justify-self: right;
+    padding-top: 50px;
 }
 
 img.app-store {
@@ -488,21 +503,18 @@ img.app-store {
 }
 
 div.download-img {
-    position: relative;
+    background-image: url(../images/download-hand.png);
+    background-repeat: no-repeat;
+    background-position: center top;
 }
 
-img.download-hand {
-    position: absolute;
-    top: -27px;
-    left: 170px;
-}
 
 section.reviews {
     min-height: 610px;
     background-image: url(../images/reviews-bg.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    padding: 110px 220px 50px;
+    padding: 110px 20px 50px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 30px;
@@ -521,10 +533,17 @@ section.reviews {
     font-size: 44px;
 }
 
-.separate-review {
+.separate-review-left,
+.separate-review-right {
     background-image: url(../images/review-img.svg);
     background-repeat: no-repeat;
-    padding: 40px 50px 0;
+    padding: 40px 50px;
+    max-width: 581px;
+    background-size: contain;
+}
+
+.separate-review-left {
+    justify-self: right;
 }
 
 p.review-description {
@@ -552,7 +571,7 @@ p.review-profession {
     margin-left: 85px;
 }
 
-.separate-review img {
+.review-img {
     float: left;
 }
 
@@ -667,9 +686,10 @@ address p {
 
 div.footer-sections {
     display: grid;
-    grid-template-columns: repeat(3, 340px);
-    justify-content: space-between;
-    padding: 80px 200px 0;
+    grid-template-columns: repeat(3, 20%);
+    justify-content: center;
+    grid-column-gap: 80px;
+    padding: 80px 0;
 }
 
 div.copyright {
@@ -683,4 +703,446 @@ div.copyright {
 .google-play:hover,
 .app-store:hover {
     opacity: 0.7;
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+
+    div.main-top {
+        padding: 50px 50px 0;
+    }
+
+    .nav-bar li:not(.last) {
+        margin-right: 20px;
+    }
+
+    section.best-in-city {
+        grid-column-gap: 40px;
+        grid-template-columns: 40% 40%;
+    }
+
+    article.econom {
+        grid-area: econom;
+    }
+
+    article.standard {
+        grid-area: standard;
+    }
+
+    article.business {
+        grid-area: business;
+    }
+
+    div.tariff-class {
+        grid-template: 1fr 1fr/ 1fr 1fr;
+        grid-row-gap: 150px;
+        grid-template-areas:
+            "econom standard"
+            "business business";
+        margin-bottom: 100px;
+    }
+
+    article.business {
+        justify-self: center;
+    }
+
+    section.do-best {
+        padding: 80px 40px 20px;
+        grid-column-gap: 30px;
+    }
+
+    section.reviews {
+        grid-template-columns: 1fr;
+    }
+
+    .reviews-name {
+        grid-column: 1/-1;
+        margin-bottom: 30px;
+    }
+
+    .separate-review-left,
+    .separate-review-right {
+        justify-self: center;
+    }
+
+    div.call {
+        padding: 70px;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    header {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    div.main-top {
+        padding: 50px 30px 0;
+    }
+
+    ul.nav-bar {
+        display: none;
+    }
+
+    div.menu {
+        display: block;
+        justify-self: end;
+    }
+
+    div.menu i {
+        color: #fff;
+    }
+
+    section.best-in-city {
+        grid-template-columns: 1fr;
+        padding: 150px 30px 80px;
+    }
+
+    form {
+        justify-self: center;
+    }
+
+    article.econom {
+        grid-area: econom;
+    }
+
+    article.standard {
+        grid-area: standard;
+    }
+
+    article.business {
+        grid-area: business;
+    }
+
+    div.tariff-class {
+        grid-template: 1fr 1fr/ 1fr 1fr;
+        grid-row-gap: 150px;
+        grid-template-areas:
+            "econom standard"
+            "business business";
+        margin-bottom: 100px;
+    }
+
+    article.business {
+        justify-self: center;
+    }
+
+    section.do-best {
+        grid-template-columns: 1fr;
+        grid-row-gap: 30px;
+        padding: 80px 80px 20px;
+    }
+
+    .do-best-name,
+    .do-best-button {
+        grid-column: 1/-1;
+    }
+
+    section.reviews {
+        grid-template-columns: 1fr;
+    }
+
+    .reviews-name {
+        grid-column: 1/-1;
+        margin-bottom: 30px;
+    }
+
+    .separate-review-left,
+    .separate-review-right {
+        justify-self: center;
+    }
+
+    section.download {
+        grid-template: 1fr 400px 500px/1fr;
+    }
+
+    .download-name {
+        grid-column: 1/-1;
+    }
+
+    div.download-app {
+        justify-self: center;
+    }
+
+    div.download-img {
+        background-position: center top 40px;
+    }
+
+    div.call {
+        padding: 70px;
+    }
+
+    div.footer-sections {
+        grid-template-columns: repeat(2, 35%);
+        grid-row-gap: 40px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    header {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    div.main-top {
+        padding: 50px 30px 0;
+    }
+
+    ul.nav-bar {
+        display: none;
+    }
+
+    div.menu {
+        display: block;
+        justify-self: end;
+    }
+
+    div.menu i {
+        color: #fff;
+    }
+
+    div.taxi-img {
+        margin: 0 15px;
+        top: 480px;
+    }
+
+    section.best-in-city {
+        grid-template-columns: 1fr;
+        padding: 150px 30px 80px;
+    }
+
+    form {
+        justify-self: center;
+    }
+
+    article.econom {
+        grid-area: econom;
+    }
+
+    article.standard {
+        grid-area: standard;
+    }
+
+    article.business {
+        grid-area: business;
+    }
+
+    div.tariff-class {
+        grid-template: repeat(3, 1fr)/1fr;
+        grid-row-gap: 150px;
+        grid-template-areas:
+            "econom"
+            "standard"
+            "business";
+        margin-bottom: 100px;
+    }
+
+    article.econom,
+    article.business {
+        justify-self: center;
+    }
+
+    section.do-best {
+        grid-template-columns: 1fr;
+        grid-row-gap: 30px;
+        padding: 80px 30px 20px;
+    }
+
+    .do-best-name,
+    .do-best-button {
+        grid-column: 1/-1;
+    }
+
+    section.reviews {
+        grid-template-columns: 1fr;
+    }
+
+    .reviews-name {
+        grid-column: 1/-1;
+        margin-bottom: 30px;
+    }
+
+    .separate-review-left,
+    .separate-review-right {
+        justify-self: center;
+    }
+
+    section.download {
+        grid-template: 1fr 400px 500px/1fr;
+    }
+
+    .download-name {
+        grid-column: 1/-1;
+    }
+
+    div.download-app {
+        justify-self: center;
+    }
+
+    div.download-img {
+        background-position: center top 40px;
+    }
+
+    div.call {
+        padding: 15px;
+    }
+
+    div.footer-sections {
+        grid-template-columns: repeat(2, 35%);
+        grid-row-gap: 40px;
+    }
+}
+
+@media (max-width: 575px) {
+    header {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    div.main-top {
+        padding: 50px 30px 0;
+        min-height: 550px;
+    }
+
+    ul.nav-bar {
+        display: none;
+    }
+
+    div.menu {
+        display: block;
+        justify-self: end;
+    }
+
+    div.menu i {
+        color: #fff;
+    }
+
+    p.tel {
+        font-size: 50px;
+    }
+
+    p.sait {
+        letter-spacing: 0;
+    }
+
+    div.taxi-img {
+        margin: 0 15px;
+        top: 400px;
+    }
+
+    section.best-in-city {
+        grid-template-columns: 1fr;
+        padding: 150px 30px 80px;
+        min-height: 500px;
+    }
+
+    form {
+        justify-self: center;
+    }
+
+    article.econom {
+        grid-area: econom;
+    }
+
+    article.standard {
+        grid-area: standard;
+    }
+
+    article.business {
+        grid-area: business;
+    }
+
+    div.tariff-class {
+        grid-template: repeat(3, 1fr)/1fr;
+        grid-row-gap: 150px;
+        grid-template-areas:
+            "econom"
+            "standard"
+            "business";
+        margin-bottom: 100px;
+    }
+
+    article.econom,
+    article.business {
+        justify-self: center;
+    }
+
+    section.do-best {
+        grid-template: auto repeat(4, 1fr) auto/ 1fr;
+        grid-row-gap: 30px;
+        padding: 80px 20px 20px;
+        justify-content: center;
+    }
+
+    article.home-pickup,
+    article.fast-booking,
+    article.bonuses-ride,
+    article.gps-searching {
+        background-position: center bottom;
+    }
+
+    .do-best article h3 {
+        margin: 0 0 20px;
+        text-align: center;
+    }
+
+    .do-best article p {
+        margin: 0 10px 100px;
+        text-align: justify;
+    }
+
+    .do-best-name,
+    .do-best-button {
+        grid-column: 1/-1;
+    }
+
+    section.reviews {
+        grid-template-columns: 1fr;
+        padding: 50px 20px 50px;
+    }
+
+    .reviews-name {
+        grid-column: 1/-1;
+        margin-bottom: 30px;
+    }
+
+    .separate-review-left,
+    .separate-review-right {
+        justify-self: center;
+        background-size: cover;
+    }
+
+    p.review-description {
+        margin-bottom: 10px;
+    }
+
+    section.download {
+        grid-template: 1fr 500px 500px/1fr;
+    }
+
+    .download-name {
+        grid-column: 1/-1;
+    }
+
+    div.download-app {
+        padding: 50px 20px;
+        justify-self: center;
+    }
+
+    img.app-store {
+        margin-left: 0;
+    }
+
+    div.download-img {
+        background-position: left top 40px;
+    }
+
+    div.call {
+        padding: 15px;
+    }
+
+    div.footer-sections {
+        grid-template-columns: repeat(1, 55%);
+        grid-row-gap: 40px;
+    }
+
+
 }
